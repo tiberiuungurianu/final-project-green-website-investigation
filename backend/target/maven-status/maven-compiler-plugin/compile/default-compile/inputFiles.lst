@@ -1,2 +1,3 @@
 /Users/tiberiuungurianu/Documents/final-project/backend/src/main/java/com/greenwebsite/backend/BackendApplication.java
+/Users/tiberiuungurianu/Documents/final-project/backend/src/main/java/com/greenwebsite/backend/config/CorsConfig.java
 /Users/tiberiuungurianu/Documents/final-project/backend/src/main/java/com/greenwebsite/backend/controllers/DataController.java
