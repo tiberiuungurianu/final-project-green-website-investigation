@@ -1,0 +1,15 @@
+.events {
+    background: #f4f4f4;
+    padding: 50px 0;
+  }
+  
+  .event-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .event-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
