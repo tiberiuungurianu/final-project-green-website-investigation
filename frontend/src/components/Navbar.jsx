@@ -1,4 +1,5 @@
-import React from "react";
+ import React from "react";
+
 import "./Hero.css"; // Importă CSS-ul unde este definit `.navbar`
 
 function Navbar() {

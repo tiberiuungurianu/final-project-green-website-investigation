@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: black;
   overflow: hidden;
 }
 
@@ -31,10 +32,12 @@
 }
 
 .hero h1 {
+  /* here are the edits for the H1 in Hero like color and all that*/
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: white;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
