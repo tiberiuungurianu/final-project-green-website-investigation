@@ -4,25 +4,26 @@ import "./Collections.css";
 const collectionsData = [
   {
     title: "Rare Books",
-    image: "../assets/images/rarebooks.jpg",
+    image: "/assets/images/rarebooks.jpg",  
     description: "A collection of rare and historic books dating back to the 17th century.",
   },
   {
     title: "Manuscripts",
-    image: "../assets/images/manuscripts.jpg",
+    image: "/assets/images/manuscripts.jpg",
     description: "Handwritten documents and original manuscripts from notable authors.",
   },
   {
     title: "Periodicals",
-    image: "../assets/images/periodicals.jpg",
+    image: "/assets/images/periodicals.jpg",
     description: "A wide range of journals, newspapers, and magazines spanning decades.",
   },
   {
     title: "Digital Archives",
-    image: "../assets/images/digital-archives.jpg",
+    image: "/assets/images/digital-archives.jpg",
     description: "A collection of digitized historical texts and archives for research.",
   },
 ];
+
 
 function Collections() {
   return (

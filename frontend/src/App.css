@@ -4,10 +4,9 @@ body {
   background-color: #f4f1ea;
   margin: 0;
   padding: 0;
-  background-image: url('https://www.londonlibrary.co.uk/images/library-background.jpg');
-  background-size: cover;
-  background-attachment: fixed;
+  background-image: none; 
 }
+
 
 /* i use this so that v0 resembles the original website as good as possible*/
 
@@ -15,7 +14,7 @@ body {
   background-color: #8b0000; /* whis color is similar to theirs */
   color: white;
   padding: 30px 20px;
-  text-align: center;
+  text-align:center;
   font-size: 24px;
   font-weight: bold;
 }

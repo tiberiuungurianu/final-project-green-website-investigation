@@ -2,20 +2,20 @@ import React from "react";
 import "./Header.css";
 
 const navLinks = [
-  { name: "About Us", path: "/about-us" },
-  { name: "Collections", path: "/collections" },
-  { name: "Framework", path: "/framework" },
-  { name: "Events", path: "/events" },
-  { name: "Support Us", path: "/support-us" }
+  { name: "About Us", page: "about" },
+  { name: "Collections", page: "collections" },
+  { name: "Framework", page: "framework" },
+  { name: "Events", page: "events" },
+  { name: "Support Us", page: "support" }
 ];
 
-function Header() {
+function Header({ setSelectedPage }) {
   return (
     <>
       <header className="header">
         <div className="container">
           <div className="logo">
-            <a href="/">
+            <a href="#" onClick={() => setSelectedPage("home")}>
               <img src="/assets/images/logo.svg" alt="London Library Logo" width="100.23" height="84" />
             </a>
           </div>
@@ -23,14 +23,16 @@ function Header() {
             <ul className="nav-links">
               {navLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={link.path}>{link.name}</a> {/* 🔹 Doar `<a>`, fără `Link` */}
+                  <a href="#" onClick={() => setSelectedPage(link.page)}>
+                    {link.name}
+                  </a>
                 </li>
               ))}
             </ul>
           </nav>
         </div>
       </header>
-      
+
       <div className="announcement">
         <div className="container">
           <p className="announcement-text">
