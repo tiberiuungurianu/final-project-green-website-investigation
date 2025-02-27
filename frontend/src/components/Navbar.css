@@ -1,0 +1,41 @@
+.navbar {
+    display: none !important;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fundal semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links li a {
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #ffdd00; /* Schimbă culoarea la hover */
+  }
+  

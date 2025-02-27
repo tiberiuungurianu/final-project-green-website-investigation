@@ -1,6 +1,13 @@
 import React from "react";
 import "./Header.css";
-import logo from "../assets/images/logo.svg"; // Import the SVG
+
+const navLinks = [
+  { name: "About Us", path: "/about-us" },
+  { name: "Collections", path: "/collections" },
+  { name: "Framework", path: "/framework" },
+  { name: "Events", path: "/events" },
+  { name: "Support Us", path: "/support-us" }
+];
 
 function Header() {
   return (
@@ -9,23 +16,26 @@ function Header() {
         <div className="container">
           <div className="logo">
             <a href="/">
-              <img src={logo} alt="London Library Logo" width="100.23" height="84" />
+              <img src="/assets/images/logo.svg" alt="London Library Logo" width="100.23" height="84" />
             </a>
           </div>
           <nav>
             <ul className="nav-links">
-              <li><a href="/about-us">About Us</a></li>
-              <li><a href="/collections">Collections</a></li>
-              <li><a href="/join">Join</a></li>
-              <li><a href="/events">Events</a></li>
-              <li><a href="/support-us">Support Us</a></li>
+              {navLinks.map((link, index) => (
+                <li key={index}>
+                  <a href={link.path}>{link.name}</a> {/* 🔹 Doar `<a>`, fără `Link` */}
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
       </header>
+      
       <div className="announcement">
         <div className="container">
-          <p className="announcement-text">CLONE for Green Website Investigation purposes</p>
+          <p className="announcement-text">
+            CLONE for Green Website Investigation purposes
+          </p>
         </div>
       </div>
     </>

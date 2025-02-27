@@ -15,7 +15,7 @@
 .hero-banner {
   width: 100vw;
   height: 100vh;
-  object-fit: cover; /* Asigură că imaginea acoperă complet spațiul */
+  object-fit:contain ; /* Asigură că imaginea acoperă complet spațiul */
   display: block;
   position: absolute;
   top: 0;
@@ -25,30 +25,34 @@
 
 .hero-content {
   width: 100%;
-  max-width: 90%; /* Asigură un spațiu pentru conținut */
+  max-width:fit-content; /* Asigură un spațiu pentru conținut */
   margin: 0 auto;
   z-index: 2;
-  position: relative;
+  position:  relative;
 }
 
 .hero h1 {
   /* here are the edits for the H1 in Hero like color and all that*/
   font-size: 48px;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: bold;
   margin-bottom: 15px;
-  color: black;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+  
 }
 
 .hero p {
+  font-family: brandon-grotesque, sans-serif;
   font-size: 22px;
   margin-bottom: 25px;
-  color: white;
+  color: black;
+  font-weight: bold;
 }
+
 .link-button {
   background: none;
   border: none;
-  color: blue;
+  color: black;
   text-decoration: underline;
   cursor: pointer;
   padding: 0;
@@ -56,9 +60,10 @@
 }
 
 .btn {
+  font-family: brandon-grotesque, sans-serif;
   display: inline-block;
-  background: #ffdd00;
-  color: black;
+  background: black;
+  color: whitesmoke;
   padding: 14px 28px;
   font-size: 20px;
   font-weight: bold;
@@ -68,7 +73,9 @@
 }
 
 .btn:hover {
-  background: #ffd000;
+  background: white;
+  color: black;
+  
 }
 
 /* Responsivitate */
@@ -80,7 +87,7 @@
     font-size: 18px;
   }
   .btn {
-    font-size: 18px;
+    font-size: px;
     padding: 12px 24px;
   }
 }
