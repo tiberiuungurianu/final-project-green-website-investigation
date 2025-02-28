@@ -1,10 +1,9 @@
 import React from "react";
-import "./Collections.css";
 
 const collectionsData = [
   {
     title: "Rare Books",
-    image: "/assets/images/rarebooks.jpg",  
+    image: "/assets/images/rarebooks.jpg",
     description: "A collection of rare and historic books dating back to the 17th century.",
   },
   {
@@ -24,7 +23,6 @@ const collectionsData = [
   },
 ];
 
-
 function Collections() {
   return (
     <section className="collections">
@@ -32,7 +30,7 @@ function Collections() {
       <div className="collections-grid">
         {collectionsData.map((collection, index) => (
           <div className="collection-card" key={index}>
-            <img src={collection.image} alt={collection.title} />
+            <img src={collection.image} alt={collection.title} loading="lazy" /> {/* Add loading="lazy" */}
             <h3>{collection.title}</h3>
             <p>{collection.description}</p>
             <a href="#" className="btn">Explore</a>

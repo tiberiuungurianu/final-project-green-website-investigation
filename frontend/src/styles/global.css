@@ -1,0 +1,31 @@
+/* Import Component Styles */
+@import url("../components/Header.css");
+@import url("../components/Footer.css");
+@import url("../components/Hero.css");
+@import url("../components/Collections.css");
+@import url("../components/Events.css");
+
+/* Import Page Styles */
+@import url("../pages/HomePage.css");
+@import url("../pages/SupportUsPage.css");
+@import url("../pages/EventsPage.css");
+@import url("../pages/FrameworkPage.css");
+@import url("../pages/AboutUsPage.css");
+@import url("../pages/CollectionsPage.css");
+
+/* Global Styles used throuout the poject for consistency. part of lazy loading */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* this will ensure full-page layouts */
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

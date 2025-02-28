@@ -1,5 +1,4 @@
 import React from "react";
-import "./Header.css";
 
 const navLinks = [
   { name: "About Us", page: "about" },
