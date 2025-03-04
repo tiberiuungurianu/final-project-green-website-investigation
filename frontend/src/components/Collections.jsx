@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import useLazyLoading from "./useLazyLoading"; // Importă hook-ul pentru lazy loading
 
 const collectionsData = [
   {
@@ -24,13 +25,19 @@ const collectionsData = [
 ];
 
 function Collections() {
+  useLazyLoading(); // turno on lazy loading - version 1
+
   return (
     <section className="collections">
       <h2>The Collection</h2>
       <div className="collections-grid">
         {collectionsData.map((collection, index) => (
           <div className="collection-card" key={index}>
-            <img src={collection.image} alt={collection.title} loading="lazy" /> {/* Add loading="lazy" */}
+            <img 
+              data-src={collection.image} // this is used for lazy loading in version 1 for images
+              alt={collection.title} 
+              className="lazy-image" // effect  for lazy loading in version 1
+            />
             <h3>{collection.title}</h3>
             <p>{collection.description}</p>
             <a href="#" className="btn">Explore</a>

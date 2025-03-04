@@ -52,14 +52,31 @@ body {
   margin-bottom: 15px;
 }
 .container p {
+  transform: translate(-50%, -50%);
   font-size: 18px;
   line-height: 1.6;
 }
 
 .footer {
-  background-color: #8b0000;
+  background-color: black;
   color: white;
   text-align: center;
   padding: 15px;
   font-size: 14px;
 }
+.loading-container {
+  position: fixed; /* Fixat pe ecran */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrare exactă */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: white; /* Fundal alb pentru contrast */
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+

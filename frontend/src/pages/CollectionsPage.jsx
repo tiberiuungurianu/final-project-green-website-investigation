@@ -1,7 +1,7 @@
 import React from "react";
 import "./CollectionsPage.css"; // Asigură-te că fișierul CSS există
 import Collections from "../components/Collections";
-import Footer from "../components/Footer";
+
 
 function CollectionsPage() {
   return (

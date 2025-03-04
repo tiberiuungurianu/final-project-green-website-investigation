@@ -1,13 +1,20 @@
 import React from "react";
-import "./AboutUsPage.css"; // 🔹 Importă stilurile specifice paginii
+import "./AboutUsPage.css";
+import aboutUsText from "../content/aboutUsText"; 
 
 function AboutUsPage() {
   return (
-    <div className="about-page">
-      <h2>About: Investigating Green Website Design </h2>
-      <p>This is a research-based project focused on energy-efficient web development.</p>
-      <p>The goal is to create a sustainable digital experience while maintaining high performance and provide a framework for everyone to use for green implementing</p>
-    </div>
+    <section className="about-us">
+         <h1>{aboutUsText.title}</h1>
+      <div className="container">
+       
+        <div>
+        {aboutUsText.paragraphs.map((paragraph, index) => (
+          <p key={index}>{paragraph}</p>
+        ))}
+      </div>
+        </div>
+    </section>
   );
 }
 

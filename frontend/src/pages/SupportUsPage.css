@@ -35,7 +35,7 @@
   }
   
   .load-video-btn {
-    background-color: #0074bc;
+    background-color: black;
     color: white;
     font-size: 18px;
     padding: 10px 20px;
@@ -46,6 +46,6 @@
   }
   
   .load-video-btn:hover {
-    background-color: #0056b3;
+    background-color:#5fcec8;
   }
   

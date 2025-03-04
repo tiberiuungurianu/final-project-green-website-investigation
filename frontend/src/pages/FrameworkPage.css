@@ -1,6 +1,6 @@
 .framework-page {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 30vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,6 +11,13 @@
   
   .framework-page h2 {
     font-size: 32px;
-    color: #0074bc;
+    color: black;
+  }
+  
+
+  .btn:hover {
+    background: black;
+   border-color: #000;
+    background-origin: padding-box;
   }
   

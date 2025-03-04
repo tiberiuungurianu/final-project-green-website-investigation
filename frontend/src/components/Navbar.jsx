@@ -10,7 +10,7 @@ function Navbar() {
         <li><a href="#">Collections</a></li>
         <li><a href="#">Framework</a></li>
         <li><a href="#">Events</a></li>
-        <li><a href="#">Support Us</a></li>
+        <li><a href="#">Video</a></li>
       </ul>
     </nav>
   );

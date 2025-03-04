@@ -1,94 +1,129 @@
-.hero {
-    width: 100vw;
-    height: 100vh;
-    background: url("/assets/images/hero-bg.jpg") no-repeat center center/cover; /* setting a bg just for hero */
-    background-attachment: scroll; /* makes the bkgroung not fixated */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-    z-index: 2;
-}
+.hero { /*here is for the photo that mmics the carousel from the original website*/
+  position: relative;
+  width: 100vw; /* Ocupă 100% din lățimea ecranului */
+  height: 60vh; /* Ocupă 60% din înălțimea ecranului */
+  display: flex;
+  align-items: center;
   
+  justify-content: center;
+  overflow: hidden; /*  Elimină scroll-ul orizontal */
+  background-size: 100%; /* Acoperă tot fundalul */
+  background-position: center center; /* Centrează imaginea */
+  background-repeat: no-repeat; /* Nu repetă imaginea */
 
-.hero-banner {
-  width: 100vw;
-  height: 100vh;
-  object-fit:contain ; /* the image takes al the space */
-  display: block;
+  image-rendering: crisp-edges;
+  image-rendering:optimizeQuality;
+  image-rendering: optimizeSpeed;
+  filter: contrast(120%) grayscale(10%); /* Simulează efect SVG */
+}
+
+
+/* Când imaginea este încărcată, setăm background-image */
+.hero.loaded {
+  background-color: transparent; /* Elimină fallback */
+}
+
+/* here are the settings for the box */
+.hero-content {
+  text-align: left;
+  top: 0;
+  left: 50;
+  
+  z-index: 1;
+background-position: 0% 0%;
+
+  width: 100%;
+  max-width: fit-content;
+  margin: 0 auto;
+  position: left;
+  color: #5fcec8 !important; /*forcing the color not to be overridden */
+}
+
+/* Overlay pentru contrast mai bun */
+.hero::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
-}
-
-.hero-content {
   width: 100%;
-  max-width:fit-content; /* checks f there is space for content */
-  margin: 0 auto;
-  z-index: 2;
-  position:  relative;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay semi-transparent */
+  z-index: 1;
 }
 
+/* Text și buton */
 .hero h1 {
-  /* here are the edits for the H1 in Hero like color and all that*/
-  font-size: 48px;
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: bold;
+  text-align: left;
+  font-size: 42px;
+  font-family: big-casino-fb, serif;
+  font-weight: 800;
+  line-height: 42px;
   margin-bottom: 15px;
   color: white;
-  
+  word-spacing: 0;
 }
 
 .hero p {
+  text-decoration: none;
   font-family: brandon-grotesque, sans-serif;
-  font-size: 22px;
+  font-size: 19px;
+  line-height: 24.7px;
+  text-align: left;
+  word-spacing: 0;
   margin-bottom: 25px;
-  color: black;
-  font-weight: bold;
-}
+  color: black; /* Schimbăm în alb pentru contrast mai bun */
 
-.link-button {
-  background: none;
-  border: none;
-  color: black;
-  text-decoration: underline;
-  cursor: pointer;
-  padding: 0;
-  font: inherit;
 }
 
 .btn {
   font-family: brandon-grotesque, sans-serif;
   display: inline-block;
-  background: black;
-  color: whitesmoke;
+  background: white;
+  color: black;
   padding: 14px 28px;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: background 0.1s;
 }
 
 .btn:hover {
-  background: white;
-  color: black;
-  
+  background: black;
+  color: white;
 }
+
+.hero-bg {
+  position:  relative; /* Ensure the hero background is positioned relative to its container */
+  width: 50%; /* Adjust the width as needed */
+  height: 50%; /* Adjust the height as needed */
+}
+
+.hero-content {
+  text-align: left;
+  text-shadow: #000;
+  background: #5fcec8; /* This messed the hero content box colour from hero.css */
+  padding: 32px 32px 32px 32px;
+
+  max-width: 444px;
+  max-height: 282.75px;
+  position: absolute;
+  top: 40px; /* Adjust the top position as needed */
+  left: 60px; /* Adjust the left position as needed */
+  transform: translate(0, 0); /* Adjust the transform as needed */
+  color: #333
+}; /* color change */
 
 /* Responsivitate */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 36px;
+      font-size: 36px;
   }
   .hero p {
-    font-size: 18px;
+      font-size: 18px;
   }
   .btn {
-    font-size: px;
-    padding: 12px 24px;
+      font-size: 18px;
+      padding: 12px 24px;
   }
 }

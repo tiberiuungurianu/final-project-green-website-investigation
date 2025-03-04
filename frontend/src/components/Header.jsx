@@ -1,11 +1,11 @@
 import React from "react";
-
+import useLazyLoading from "./useLazyLoading";
 const navLinks = [
   { name: "About Us", page: "about" },
   { name: "Collections", page: "collections" },
   { name: "Framework", page: "framework" },
   { name: "Events", page: "events" },
-  { name: "Support Us", page: "support" }
+  { name: "Video Optimisation", page: "support" }
 ];
 
 function Header({ setSelectedPage }) {

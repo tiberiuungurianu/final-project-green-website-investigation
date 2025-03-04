@@ -6,7 +6,7 @@ function SupportUsPage() {
 
   return (
     <div className="support-page">
-      <h2>Support Us - To be renamed...</h2>
+      <h2>Video Optimisation Part</h2>
       <p> This page will be used for video optimisation </p>
       <p>Watch our video to learn more about the project:</p>
 

@@ -1,11 +1,12 @@
 .collections {
     text-align: center;
     padding: 50px 20px;
-    background: #f8f8f8;
+    background: #ffffff; /* background white */
   }
   
   .collections h2 {
     font-size: 32px;
+    color: #000;
     margin-bottom: 30px;
   }
   
@@ -18,7 +19,7 @@
   }
   
   .collection-card {
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -46,13 +47,15 @@
     margin-top: 10px;
     padding: 10px 20px;
     background: #0074bc;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
   }
   
   .btn:hover {
-    background: #0056b3;
+    background: black;
+   border-color: #000;
+    background-origin: padding-box;
   }
   

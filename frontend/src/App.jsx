@@ -1,9 +1,10 @@
 import React, { lazy, Suspense, useState } from "react";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import "./index.css"; // Minimise JavaScript requests
+import "./index.css"; // Minimize JavaScript requests
 
-// Implementing more lazy loading
+// Lazy loading pentru pagini
 const HomePage = lazy(() => import("./pages/HomePage"));
 const CollectionsPage = lazy(() => import("./pages/CollectionsPage"));
 const FrameworkPage = lazy(() => import("./pages/FrameworkPage"));
@@ -12,15 +13,18 @@ const AboutUsPage = lazy(() => import("./pages/AboutUsPage"));
 const EventsPage = lazy(() => import("./pages/EventsPage"));
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState("home");
+  const [selectedPage, setSelectedPage] = useState("home"); 
 
   return (
     <>
       <Header setSelectedPage={setSelectedPage} />
-
-      {/* Lazy loading. Pages will load only when selected. */}
-      <Suspense fallback={<p>Loading...</p>}>
-        {selectedPage === "home" && <HomePage />}
+{/*styling the loading message*/}
+      <Suspense fallback={
+    <div className="loading-container">
+        <p>Loading...</p> 
+    </div>
+      }>
+        {selectedPage === "home" && <HomePage setSelectedPage={setSelectedPage} />} 
         {selectedPage === "about" && <AboutUsPage />}
         {selectedPage === "collections" && <CollectionsPage />}
         {selectedPage === "events" && <EventsPage />}

@@ -7,7 +7,7 @@
     font-weight: 400;
     line-height: 24px;
     text-align: center;
-    padding: 12px 0;
+    padding: 12px ;
 }
 
 .announcement .container {
@@ -38,7 +38,7 @@
     width: 100%;   
 }
 
-.header .logo img {
+.header .logo img {  /*this is for logo image*/
     height: 100.23px;
     width: 84px; 
 }
@@ -53,14 +53,16 @@
 
 .header .nav-links li a {
     text-decoration: none;
-    color: #333;
+    color: black; /*this is the text color*/
     font-weight: bold;
     transition: color 0.3s;
     margin: 0 15px;
+    padding: 30px; /*this makes the buttons bigger like the original website*/
 }
-
+/*this edits the text color*/
 .header .nav-links li a:hover {
-    color: #0074bc;
+    color: white;
+    background-color: black;
 }
 
 .container {
@@ -86,27 +88,9 @@
     font-size: 18px;
     transition: color 0.3s;
 }
-
+/*
 .nav-links li a:hover {
     color: #0074bc;
 }
+    */
 
-.hero-bg {
-    position: relative; /* Ensure the hero background is positioned relative to its container */
-    width: 100%; /* Adjust the width as needed */
-    height: auto; /* Adjust the height as needed */
-}
-
-.hero-content {
-    text-align: left;
-    text-shadow: #000;
-    background: #20c997;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 400px;
-    position: absolute;
-    top: 20px; /* Adjust the top position as needed */
-    left: 20px; /* Adjust the left position as needed */
-    transform: translate(0, 0); /* Adjust the transform as needed */
-    color: #333; /* color change */
-}
