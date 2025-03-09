@@ -1,18 +1,23 @@
 .support-page {
+    font-family: brandon-grotesque, sans-serif;
     width: 100vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* Alege ce aliniere dorești:
+       - Dacă vrei ca elementele să înceapă de sus și să fie centrate pe orizontală: */
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    background-color: #f8f8f8;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    color: black;
   }
   
   .support-page h2 {
+    text-align: center;
     font-size: 32px;
-    color: #0074bc;
+    color: black;
   }
   
   .support-page p {
@@ -20,21 +25,29 @@
     max-width: 800px;
   }
   
+  /* Styling for video container */
   .video-container {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 560px; /* Same width as the YouTube iframe */
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 682px;
   }
   
+  /* Adjusting iframe for better responsiveness */
   .video-container iframe {
     width: 100%;
-    height: 315px;
-    border-radius: 10px; /*  add rounded corners */
+    height: 384px;
+    max-width: 682px;
+    border-radius: 20px;
   }
   
+  /* Styling for lazy load button */
   .load-video-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     color: white;
     font-size: 18px;
@@ -43,9 +56,100 @@
     cursor: pointer;
     margin-top: 15px;
     border-radius: 5px;
+    transition: background 0.3s ease-in-out;
   }
   
   .load-video-btn:hover {
-    background-color:#5fcec8;
+    background-color: #5fcec8;
+  }
+  
+  /* Styling for lazy-loaded images */
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 400px;
+    max-width: 100%;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeQuality;
+    image-rendering: optimizeSpeed;
+    filter: contrast(120%) grayscale(10%);
+  }
+  
+  .image-container img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block !important;
+  }
+  
+  /* Styling for main content */
+  .main-content {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 40px 0 40px 0;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+  }
+  /* Wrapper-ul care cuprinde cele două coloane, poziționat la 0% 0% */
+  .columns-wrapper {
+    display: flex;                  /* Asigură alinierea pe orizontală */
+    justify-content: center;        /* Centrează conținutul în interiorul containerului */
+    align-items: flex-start;        /* Aliniere verticală la început */
+    width: 1140px;                  /* Lățimea totală a containerului */
+    margin: 0 auto;                 /* Centrează containerul pe pagină */
+    background-position: 0% 0%;
+    
+  }
+  
+  .main-text {
+    display: block;
+    width: 730px;
+    padding: 5px;                   /* Setează un padding uniform */
+    position: relative;
+    font-size: 16px;                /* Alege doar valoarea dorită */
+    line-height: 30px;
+    text-align: left;
+    border-radius: 5px;             /* Folosește o singură proprietate pentru rotunjirea colțurilor */
+    box-sizing: border-box;
+    color: black;
+  }
+  
+  .second-column {
+    width: 285px;
+    padding: 0 15px;
+    margin-left: 95px;              /* Spațiul între coloane */
+    flex: 1;                        /* Permite ajustarea automată a spațiului suplimentar */
+    font-size: 14px;
+    line-height: 24px;
+    text-align: left;
+    color: black;
+    box-sizing: border-box;
+    display: block;
+  }
+  
+  
+  /* Placeholder style for lazy-loaded images */
+  .placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 16px;
+    border-radius: 8px;
   }
   

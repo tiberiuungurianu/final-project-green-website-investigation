@@ -5,19 +5,19 @@ function Hero({ setSelectedPage }) {
 
   useEffect(() => {
     const img = new Image();
-    img.src = "/assets/images/hero-bg.jpg";
+    img.src = "/assets/images/hero-bg.webp";
     img.onload = () => setBackgroundLoaded(true);
   }, []);
 
   return (
     <section
       className={`hero ${backgroundLoaded ? "loaded" : ""}`}
-      style={backgroundLoaded ? { backgroundImage: `url(/assets/images/hero-bg.jpg)` } : {}}
+      style={backgroundLoaded ? { backgroundImage: `url(/assets/images/hero-bg.webp)` } : {}}
     >
       <div className="hero-overlay"></div>  
       <div className="hero-content">
-        <h1>Welcome to The London Library's CLONE</h1>
-        <p>Prototype Version: 1 (ONE) - Lazy Loading and Caching</p>
+        <h1>Welcome to The London Library CLONE - Green Website</h1>
+        <p>This prototype is used for research purposes only</p>
         <button className="btn" onClick={() => setSelectedPage("framework")}>
           Framework
         </button>

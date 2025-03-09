@@ -1,25 +1,26 @@
 .about-us {
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     padding: 60px 20px;
     text-align: center;
 }
 
-.about-us h1{
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
 .about-us .container {
     max-width: 800px;
     margin: 0 auto;
+    flex-direction: column; /*otherwise they will be shown side by side and i dont want that*/
+    align-items: center;
+    text-align: center;
+    color: #ffffff !important;
 }
 
 .about-title {
+    text-align: center;
     font-size: 36px;
     font-weight: bold;
-    color: #333;
+    color: #000;
+    text-align: center;
+    display: block;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -32,7 +33,34 @@
 
 .about-paragraph {
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 24px;
     color: #555;
-    margin-bottom: 15px;
 }
+.loading-text {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
+
+.error-text {
+    text-align: center;
+    font-size: 18px;
+    color: red;
+}
+ /* this section is desig to optimsie performance of the CSS file. 
+ it will reduce anumations*/
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  /*this will add dark theme*/
+  @media (prefers-color-scheme: dark) {
+    .about-us {
+      background-color: #ffffff;
+      color: #ffffff;
+    }
+  }
+  

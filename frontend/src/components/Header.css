@@ -1,96 +1,113 @@
+/* === Announcement Styles === */
 .announcement {
     width: 100%;
     background: #521c6f;
-    color: rgb(255, 255, 255);
+    color: #fff;
     font-family: "brandon-grotesque", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
-    padding: 12px ;
-}
-
-.announcement .container {
+    padding: 12px;
+    margin-top: 100px;  /* Asigură că announcement-ul nu este acoperit de header */
+  }
+  
+  .announcement .container {
     max-width: 1200px;
-    margin: auto;
-}
-
-.announcement-text {
-    line-height: 20.8px;
+    margin: 0 auto;
+  }
+  
+  .announcement-text {
     margin: 0;
+    line-height: 20.8px;
     text-align: center;
-}
-
-.header {
+  }
+  
+  .clone-highlight {
+    color: yellow;
+    font-weight: bold;
+  }
+  
+  /* === Header Styles === */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff; 
-    /*padding: 15px 0; */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 100px;
-}
-
-.header .container {
+  }
+  
+  .header .container {
+    background-position: 0% 0%;
+    text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;   
-}
-
-.header .logo img {  /*this is for logo image*/
-    height: 100.23px;
-    width: 84px; 
-}
-
-.header .nav-links {
+    width: 100%;
+    max-width: 1200px;
+    height: 84px;
+    margin: 0 287px 0 287px;
+    padding: 0 15px 0 15px;
+  }
+  
+  .header .logo img {
+    position: relative;
+    width: auto;
+    height: 84px;
+    margin-top: -10px;
+    vertical-align: right;
+  }
+  
+  .header .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
     margin: 0;
     padding: 0;
-}
-
-.header .nav-links li a {
+  }
+  
+  .header .nav-links li a {
     text-decoration: none;
-    color: black; /*this is the text color*/
+    color: #000;
     font-weight: bold;
     transition: color 0.3s;
     margin: 0 15px;
-    padding: 30px; /*this makes the buttons bigger like the original website*/
-}
-/*this edits the text color*/
-.header .nav-links li a:hover {
+    padding: 30px; /* Ajustează după preferință */
+  }
+  
+  .header .nav-links li a:hover {
     color: white;
-    background-color: black;
-}
-
-.container {
+    background-color: #002a4e;
+  }
+  
+  /* === Utility Classes === */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
     margin: 0;
     padding: 0;
-}
-
-.nav-links li a {
+  }
+  
+  .nav-links li a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
     font-size: 18px;
     transition: color 0.3s;
-}
-/*
-.nav-links li a:hover {
-    color: #0074bc;
-}
-    */
-
+  }
+  

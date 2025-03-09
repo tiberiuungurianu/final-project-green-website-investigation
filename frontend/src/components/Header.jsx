@@ -1,5 +1,5 @@
 import React from "react";
-import useLazyLoading from "./useLazyLoading";
+
 const navLinks = [
   { name: "About Us", page: "about" },
   { name: "Collections", page: "collections" },
@@ -9,20 +9,30 @@ const navLinks = [
 ];
 
 function Header({ setSelectedPage }) {
+  // Handler generic pentru toate link-urile de navigație
+  const handleLinkClick = (e, page) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    setSelectedPage(page);
+  };
+
   return (
     <>
       <header className="header">
         <div className="container">
           <div className="logo">
-            <a href="#" onClick={() => setSelectedPage("home")}>
-              <img src="/assets/images/logo.svg" alt="London Library Logo" width="100.23" height="84" />
+            <a href="#" onClick={(e) => handleLinkClick(e, "home")}>
+              <img
+                src="/assets/images/logo.webp"
+                alt="London Library Logo"
+              />
             </a>
           </div>
           <nav>
             <ul className="nav-links">
               {navLinks.map((link, index) => (
                 <li key={index}>
-                  <a href="#" onClick={() => setSelectedPage(link.page)}>
+                  <a href="#" onClick={(e) => handleLinkClick(e, link.page)}>
                     {link.name}
                   </a>
                 </li>
@@ -35,7 +45,7 @@ function Header({ setSelectedPage }) {
       <div className="announcement">
         <div className="container">
           <p className="announcement-text">
-            CLONE for Green Website Investigation purposes
+            <span className="clone-highlight">CLONE</span> for Green Website Investigation purposes
           </p>
         </div>
       </div>

@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <img src="/assets/images/logo-white.svg" alt="Footer Logo White" className="footer-logo"/>
+        <img src="/assets/images/logo-white.webp" alt="Footer Logo White" className="footer-logo"/>
         
         <div className="footer-citation">
           <h1>"A library steeped in history"</h1>
