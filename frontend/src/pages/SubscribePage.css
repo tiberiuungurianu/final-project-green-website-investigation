@@ -1,0 +1,158 @@
+.subscribe-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+        box-sizing: border-box;
+    }
+
+/* main thing */
+.subscribe-container {
+    background-color: #ffffff;
+  border: 5px solid #5bc4bf; /* TURCOAZ */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 0px;
+  max-width: 700px;     
+  width: 100%;            
+  text-align: center;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.subscribe-info {
+    width: 100%;
+    background: white;
+    text-align: center;
+    padding: 40px;
+   
+    border-radius: 0px;
+    margin-bottom: 20px; 
+    box-sizing: border-box;
+}
+
+/* this is title */
+.subscribe-info h1 {
+    font-size: 28px;;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.subscribe-info p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Imagine newsletter */
+.top-part {
+    text-align: left;
+    display: block;
+    width: auto;
+    height: 127px;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 30px 0 30px 0;
+}
+
+.row {
+    margin: 0 -15px 0 -15px;
+    display: flex;
+    box-sizing: border-box;
+    background-position: 0% 0%;
+    text-align: left;
+    margin-left: 100px;
+    width: 825px;
+    max-width: 75%;
+}
+
+.newsletter-image {
+    max-width: auto; /* NU modifică dimensiunea imaginii */
+    display: block;
+    margin: 0 auto 20px auto;
+ 
+}
+
+.row h1 {
+    text-align: left;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 38px;
+    box-sizing: border-box;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start; 
+    width: 100%;
+}
+
+
+.subscribe-form label {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px; 
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px; 
+    box-sizing: border-box;
+}
+
+
+.gdpr-checkbox {
+    display: flex;
+  align-items: center;
+  gap: 10px;     
+  margin: 0 0 10px;
+}
+
+
+.gdpr-checkbox input {
+    align-items: left;
+    margin-right: 10px;
+}
+
+/* Stil buton */
+.subscribe-submit {
+    background-color: #5bc4bf; /* TURCOAZ */
+    ;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.subscribe-submit:hover {
+    background-color: #401655;
+}
+
+/* Mesaj de răspuns */
+.response-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: green;
+    font-weight: bold;
+}

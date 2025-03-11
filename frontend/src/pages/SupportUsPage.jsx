@@ -4,7 +4,7 @@ import "./SupportUsPage.css";
 function SupportUsPage() {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [content, setContent] = useState({ mainText: "", secondColumn: "" });
-  const imageSrc = "/assets/images/video-page-photo.jpg";
+  const imageSrc = "/assets/images/video-page-photo.webp";
 
   useEffect(() => {
     const handleBeforeUnload = () => console.log("Page is reloading");

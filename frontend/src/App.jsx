@@ -11,6 +11,7 @@ const FrameworkPage = lazy(() => import("./pages/FrameworkPage"));
 const SupportUsPage = lazy(() => import("./pages/SupportUsPage"));
 const AboutUsPage = lazy(() => import("./pages/AboutUsPage"));
 const EventsPage = lazy(() => import("./pages/EventsPage"));
+const SubscribePage = lazy(() => import("./pages/SubscribePage"));
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home"); 
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <Header setSelectedPage={setSelectedPage} />
+   
 {/*styling the loading message*/}
       <Suspense fallback={
     <div className="loading-container">
@@ -30,6 +32,7 @@ function App() {
         {selectedPage === "events" && <EventsPage />}
         {selectedPage === "framework" && <FrameworkPage />}
         {selectedPage === "support" && <SupportUsPage />}
+        {selectedPage === "subscribe" && <SubscribePage />}
       </Suspense>
 
       <Footer />

@@ -21,6 +21,12 @@
 /* Când imaginea este încărcată, setăm background-image */
 .hero.loaded {
   background-color: transparent; /* Elimină fallback */
+  max-width: 100%;
+  height: 100;
+  vertical-align: middle; /*asta a facut ca scorul de la performanca sa fie de la 71 la 74
+*/
+
+  
 }
 
 /* here are the settings for the box */

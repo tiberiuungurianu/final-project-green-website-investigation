@@ -75,3 +75,12 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.newsletter-image {
+  width: 100%; /* Face poza mai mică (ajustează procentul după preferință) */
+  width: 100%; /* Face poza mai mică (ajustează procentul după preferință) */
+  max-height: 400px; /* Limitează dimensiunea maximă */
+  object-fit: cover; /* Umple întreg spațiul */
+  display: block;
+  margin: 0 auto 0 auto; /* Centrare + spațiere sub imagine */
+  background-position: 50% 50%; /* Centrare imagine */
+}

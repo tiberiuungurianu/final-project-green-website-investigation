@@ -19,12 +19,14 @@ function Header({ setSelectedPage }) {
   return (
     <>
       <header className="header">
+        <link rel="preload" as="image" href="/assets/images/hero-bg.webp" type="image/webp"/>
         <div className="container">
           <div className="logo">
             <a href="#" onClick={(e) => handleLinkClick(e, "home")}>
               <img
                 src="/assets/images/logo.webp"
                 alt="London Library Logo"
+                height={90} width={90}
               />
             </a>
           </div>
@@ -45,7 +47,12 @@ function Header({ setSelectedPage }) {
       <div className="announcement">
         <div className="container">
           <p className="announcement-text">
-            <span className="clone-highlight">CLONE</span> for Green Website Investigation purposes
+            <button 
+              className="subscribe-button" 
+              onClick={() => setSelectedPage("subscribe")}
+            >
+              Subscribe to us
+            </button> Clone for Green Website Investigation purposes
           </p>
         </div>
       </div>
