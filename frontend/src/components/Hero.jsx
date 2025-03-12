@@ -5,14 +5,14 @@ function Hero({ setSelectedPage }) {
 
   useEffect(() => {
     const img = new Image();
-    img.src = "/assets/images/hero-bg.webp";
+    img.src = "/assets/images/hero-bg-small.webp";
     img.onload = () => setBackgroundLoaded(true);
   }, []);
 
   return (
     <section
       className={`hero ${backgroundLoaded ? "loaded" : ""}`}
-      style={backgroundLoaded ? { backgroundImage: `url(/assets/images/hero-bg.webp)` } : {}}
+      style={backgroundLoaded ? { backgroundImage: `url(/assets/images/hero-bg-small.webp)` } : {}}
     >
       <div className="hero-overlay"></div>  
       <div className="hero-content">

@@ -1,7 +1,5 @@
 @import url("./styles/global.css");
 
-
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,9 +24,7 @@ a:hover {
   color: black;
 }
 
-
 body {
-  font-family: "big-caslon-fb", serif;
   margin: 0;
   overflow-x: hidden; /* stops horizontal scroll */
   width: 100%;
@@ -75,12 +71,66 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
 .newsletter-image {
-  width: 100%; /* Face poza mai mică (ajustează procentul după preferință) */
   width: 100%; /* Face poza mai mică (ajustează procentul după preferință) */
   max-height: 400px; /* Limitează dimensiunea maximă */
   object-fit: cover; /* Umple întreg spațiul */
   display: block;
-  margin: 0 auto 0 auto; /* Centrare + spațiere sub imagine */
+  margin: 0 auto; /* Centrare */
   background-position: 50% 50%; /* Centrare imagine */
+}
+
+@font-face {
+  font-family: 'MerriweatherSans';
+  src: url('/assets/fonts/MerriweatherSans-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MerriweatherSans';
+  src: url('/assets/fonts/MerriweatherSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body {
+  font-family: 'Merriweather', serif !important;
+}
+
+/* Dimensiuni explicite pentru elemente (reduc layout shift) */
+.footer {
+  min-height: 200px;
+}
+
+.hero::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 400px; /* Ajustează după design */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Optimizare layout shift pentru imagini */
+.footer-logo {
+  width: 90px;
+  height: 90px;
+  display: block;
+}
+
+.footer-citation h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-citation h2 {
+  font-size: 1.2rem;
 }

@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <img src="/assets/images/logo-white.webp" alt="Footer Logo White" className="footer-logo"  height={90} width={90
+        <img src="/assets/images/logo-white-small.webp" alt="Footer Logo White" className="footer-logo"  height={90} width={90
         }/>
         
         <div className="footer-citation">

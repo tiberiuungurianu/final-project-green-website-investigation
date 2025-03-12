@@ -1,10 +1,11 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import viteCompression from 'vite-plugin-compression';
 
-export default defineConfig({
-  publicDir: "public", // Asigură că fișierele din `public/` sunt servite corect
-  server: {
-    fs: {
-      strict: false // Permite acces la fișiere externe
-    }
-  }
-});
+export default defineConfig(({ mode }) => ({
+  publicDir: "public",
+  plugins: [
+    react(),
+    ...(mode === 'production' ? [viteCompression()] : []),
+  ],
+}));

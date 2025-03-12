@@ -1,0 +1,18 @@
+{
+    "footer": {
+      "logo": {
+        "src": "/assets/images/logo-white.webp",
+        "srcSet": "/assets/images/logo-white-small.webp 600w, /assets/images/logo-white.webp 1200w",
+        "sizes": "(max-width: 600px) 600px, 1200px",
+        "alt": "Footer Logo White",
+        "height": 90,
+        "width": 90
+      },
+      "citation": {
+        "quote": "A library steeped in history",
+        "author": "Tom Holland"
+      },
+      "copyright": "© 2025 London Library - All Rights Reserved (usually, not today)"
+    }
+  }
+  

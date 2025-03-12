@@ -1,31 +1,56 @@
 import React, { useEffect } from "react";
-import useLazyLoading from "./useLazyLoading"; // Importă hook-ul pentru lazy loading
 
 const collectionsData = [
   {
     title: "Rare Books",
-    image: "/assets/images/rarebooks.webp",
-    description: "A collection of rare and historic books dating back to the 17th century.",
+    image: "/assets/images/rarebooks-small.webp",
+    description: "A curated selection of rare and valuable books.",
   },
   {
     title: "Manuscripts",
-    image: "/assets/images/manuscripts.webp",
+    image: "/assets/images/manuscripts-small.webp",
     description: "Handwritten documents and original manuscripts from notable authors.",
   },
   {
     title: "Periodicals",
-    image: "/assets/images/periodicals.webp",
-    description: "A wide range of journals, newspapers, and magazines spanning decades.",
+    image: "/assets/images/periodicals-small.webp",
+    description: "A collection of historic periodicals and magazines.",
   },
   {
     title: "Digital Archives",
-    image: "/assets/images/digital-archives.webp",
+    image: "/assets/images/digital-archives-small.webp",
     description: "A collection of digitized historical texts and archives for research.",
   },
+
 ];
 
-function Collections() {
-  useLazyLoading(); // turno on lazy loading - version 1
+const Collections = () => {
+  useEffect(() => {
+    const lazyImages = document.querySelectorAll("img.lazy-image");
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.srcset = img.dataset.srcset;
+          img.classList.add("loaded");
+          obs.unobserve(img);
+        }
+      });
+    });
+
+    lazyImages.forEach((img) => observer.observe(img));
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const images = document.querySelectorAll("img.lazy-image");
+    images.forEach((img) => {
+      img.dataset.src = img.getAttribute("data-src");
+      img.dataset.srcset = img.getAttribute("data-srcset");
+    });
+  }, []);
 
   return (
     <section className="collections">
@@ -33,10 +58,16 @@ function Collections() {
       <div className="collections-grid">
         {collectionsData.map((collection, index) => (
           <div className="collection-card" key={index}>
-            <img 
-              data-src={collection.image} // this is used for lazy loading in version 1 for images
-              alt={collection.title} 
-              className="lazy-image" // effect  for lazy loading in version 1
+            <img
+              className="lazy-image"
+              alt={collection.title}
+              data-src={collection.image}
+              data-srcset={
+                collection.imageSmall
+                  ? `${collection.imageSmall} 600w, ${collection.image} 1200w`
+                  : collection.image
+              }
+              sizes="(max-width: 600px) 600px, 1200px"
             />
             <h3>{collection.title}</h3>
             <p>{collection.description}</p>

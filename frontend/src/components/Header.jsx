@@ -19,12 +19,12 @@ function Header({ setSelectedPage }) {
   return (
     <>
       <header className="header">
-        <link rel="preload" as="image" href="/assets/images/hero-bg.webp" type="image/webp"/>
+        <link rel="preload" as="image" href="/assets/images/hero-bg-small.webp" type="image/webp"/>
         <div className="container">
           <div className="logo">
             <a href="#" onClick={(e) => handleLinkClick(e, "home")}>
               <img
-                src="/assets/images/logo.webp"
+                src="/assets/images/logo-small.webp"
                 alt="London Library Logo"
                 height={90} width={90}
               />

@@ -11,6 +11,15 @@
     left: 0;
     z-index: 1000;
   }
+  .nav-container {
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-container a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
   
   .nav-links {
     align-items: center;

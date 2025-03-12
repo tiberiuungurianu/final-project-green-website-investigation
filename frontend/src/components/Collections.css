@@ -27,7 +27,9 @@
   }
   
   .collection-card img {
-    width: 250px;
+    width: auto;
+    max-width: 250px;
+    aspect-ratio: 1.51;
     height: 200px;
     border-radius: 8px;
   }

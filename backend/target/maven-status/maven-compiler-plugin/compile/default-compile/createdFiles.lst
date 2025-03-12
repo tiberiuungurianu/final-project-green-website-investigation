@@ -1,5 +1,11 @@
+com/greenwebsite/backend/controllers/HomeController.class
 com/greenwebsite/backend/config/CorsConfig$1.class
+com/greenwebsite/backend/controllers/SubscriptionController.class
 com/greenwebsite/backend/controllers/DataController.class
 com/greenwebsite/backend/config/CorsConfig.class
 com/greenwebsite/backend/BackendApplication.class
+com/greenwebsite/backend/requests/SubscriptionRequest.class
 com/greenwebsite/backend/TestController.class
+com/greenwebsite/backend/repositories/SubscriberRepository.class
+com/greenwebsite/backend/entities/Subscriber.class
+com/greenwebsite/backend/models/SubscriptionRequest.class

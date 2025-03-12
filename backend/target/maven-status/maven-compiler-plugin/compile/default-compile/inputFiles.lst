@@ -1,3 +1,9 @@
 /Users/tiberiuungurianu/Documents/final-project/backend/src/main/java/com/greenwebsite/backend/BackendApplication.java
 /Users/tiberiuungurianu/Documents/final-project/backend/src/main/java/com/greenwebsite/backend/config/CorsConfig.java
 /Users/tiberiuungurianu/Documents/final-project/backend/src/main/java/com/greenwebsite/backend/controllers/DataController.java
+/Users/tiberiuungurianu/Documents/final-project/backend/src/main/java/com/greenwebsite/backend/controllers/HomeController.java
+/Users/tiberiuungurianu/Documents/final-project/backend/src/main/java/com/greenwebsite/backend/controllers/SubscriptionController.java
+/Users/tiberiuungurianu/Documents/final-project/backend/src/main/java/com/greenwebsite/backend/entities/Subscriber.java
+/Users/tiberiuungurianu/Documents/final-project/backend/src/main/java/com/greenwebsite/backend/models/SubscriptionRequest.java
+/Users/tiberiuungurianu/Documents/final-project/backend/src/main/java/com/greenwebsite/backend/repositories/SubscriberRepository.java
+/Users/tiberiuungurianu/Documents/final-project/backend/src/main/java/com/greenwebsite/backend/requests/SubscriptionRequest.java
