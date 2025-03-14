@@ -49,10 +49,10 @@ function AboutUsPage() {
       <div className="container">
         <h1 className="about-title">{aboutTitle || "Title does not exist"}</h1>
 
-        {/* Imagine normală din JSON, fără Lazy Loading */}
+        {/* Imagine normală din JSON, fără Lazy Loading 
         {imageSrc && (
           <img src={imageSrc} alt="About Us" />
-        )}
+        )} */}
 
         <div className="about-content">
           {formattedText.map((paragraph, index) => (

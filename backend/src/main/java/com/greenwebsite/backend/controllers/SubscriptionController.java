@@ -16,14 +16,14 @@ public class SubscriptionController {
 
     @PostMapping("/subscribe")
     public ResponseEntity<String> subscribe(@RequestBody SubscriptionRequest request) {
-        // Mapare din DTO în entitate
+        // this creates a new subscriber object
         Subscriber subscriber = new Subscriber();
         subscriber.setFirstName(request.getFirst_name());
         subscriber.setLastName(request.getLast_name());
         subscriber.setEmail(request.getEmail());
         subscriber.setConsent(request.isConsent());
 
-        // Salvează datele în baza de date
+        // this saves the database data
         subscriberRepository.save(subscriber);
 
         return ResponseEntity.ok("Subscription saved successfully!");

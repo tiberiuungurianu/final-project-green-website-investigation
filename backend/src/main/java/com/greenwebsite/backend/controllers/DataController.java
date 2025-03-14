@@ -11,17 +11,17 @@ import java.util.Arrays;
 @RequestMapping("/api") // Prefix for all routes in this controller
 public class DataController {
 
-    @Cacheable("data") // Enables caching for this endpoint
-    @GetMapping("/data") // Accessible at http://localhost:8080/api/data
+    @Cacheable("data") // this enables caching for this endpoint
+    @GetMapping("/data") // it is accessible at http://localhost:8080/api/data
     public List<String> getData() {
-        simulateSlowProcessing(); // Simulates a slow backend response
+        simulateSlowProcessing(); // simulating a slow backend response to test if the caching works
         return Arrays.asList("Element 1", "Element 2", "Element 3");
     }
 
-    @Cacheable("collections") // Enables caching for collections API
-    @GetMapping("/collections") // Accessible at http://localhost:8080/api/collections
+    @Cacheable("collections") // same as above, but for a different endpoint
+    @GetMapping("/collections") 
     public List<String> getCollections() {
-        simulateSlowProcessing(); // Simulates a slow database query
+        simulateSlowProcessing(); 
         return Arrays.asList("Rare Books", "Manuscripts", "Periodicals", "Digital Archives");
     }
 

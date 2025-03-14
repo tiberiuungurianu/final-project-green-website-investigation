@@ -1,4 +1,4 @@
-//this is a helper for lazy loading for Collections.jsx
+//this is a helper for lazy loading for Collections.jsx for the images to load only when they are in the viewport
 import { useEffect } from "react";
 
 function useLazyLoading() {
@@ -9,16 +9,16 @@ function useLazyLoading() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target;
-          img.src = img.dataset.src; // Setează `src` când imaginea intră în viewport
-          img.classList.add("loaded"); // Adaugă o clasă pentru efect vizual
-          observer.unobserve(img); // Oprește observarea după încărcare
+          img.src = img.dataset.src; // set the src when the image is in the viewport
+          img.classList.add("loaded"); // add the loaded class to the image
+          observer.unobserve(img); //this stoppes the observer after the image is loaded
         }
       });
     });
 
     images.forEach((img) => observer.observe(img));
 
-    return () => observer.disconnect(); // this cleans up the memory    
+    return () => observer.disconnect(); // this cleans up the memory after the component is unmounted 
   }, []);
 }
 
