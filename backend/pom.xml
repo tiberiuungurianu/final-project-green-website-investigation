@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>backend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version> <!-- this is for keeping track iof changes for the uploads-->
 	<name>backend</name>
 	<description>Green Website Investigation </description>
 	<url/>
