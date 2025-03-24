@@ -1,137 +1,158 @@
-.hero { /*here is for the photo that mmics the carousel from the original website*/
+/* === Hero Container === */
+.hero {
   position: relative;
-  width: 100vw; /* Ocupă 100% din lățimea ecranului */
-  height: 60vh; /* Ocupă 60% din înălțimea ecranului */
+  width: 100vw;
+  height: 60vh;
   display: flex;
   align-items: center;
-  
   justify-content: center;
-  overflow: hidden; /*  Elimină scroll-ul orizontal */
-  background-size: 100%; /* Acoperă tot fundalul */
-  background-position: center center; /* Centrează imaginea */
-  background-repeat: no-repeat; /* Nu repetă imaginea */
-
-  image-rendering: crisp-edges;
-  image-rendering:optimizeQuality;
-  image-rendering: optimizeSpeed;
-  filter: contrast(120%) grayscale(10%); /* Simulează efect SVG */
+  overflow: hidden;
 }
 
-
-/* Când imaginea este încărcată, setăm background-image */
-.hero.loaded {
-  background-color: transparent; /* Elimină fallback */
-  max-width: 100%;
-  height: 100;
-  vertical-align: middle; /*asta a facut ca scorul de la performanca sa fie de la 71 la 74
-*/
-
-  
-}
-
-/* here are the settings for the box */
-.hero-content {
-  text-align: left;
-  top: 0;
-  left: 50;
-  
-  z-index: 1;
-background-position: 0% 0%;
-
-  width: 100%;
-  max-width: fit-content;
-  margin: 0 auto;
-  position: left;
-  color: #5fcec8 !important; /*forcing the color not to be overridden */
-}
-
-/* Overlay pentru contrast mai bun */
-.hero::before {
-  content: "";
+/* === Hero Background Image === */
+.hero-image-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Overlay semi-transparent */
+  z-index: 0;
+  overflow: hidden;
+  min-height: 720px;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fade 15s infinite;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.hero-slide.img1 {
   z-index: 1;
 }
 
-/* Text și buton */
-.hero h1 {
+.hero-slide.img2 { animation-delay: 5s; }
+.hero-slide.img3 { animation-delay: 10s; }
+.hero-slide.img4 { animation-delay: 15s; }
+.hero-slide.img5 { animation-delay: 20s; }
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(120%) grayscale(10%);
+  image-rendering: crisp-edges;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  image-rendering: auto;
+  filter: blur(1px); /* Add a slight blur to the image to mask the pixels from the webp format*/
+  backdrop-filter: blur(1px); /* Add a slight blur to the image to mask the pixels from the webp format*/
+}
+
+.hero-image.loaded {
+  opacity: 1;
+}
+
+/* === Overlay (Optional) === */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* === Hero Content Box === */
+.hero-content {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  z-index: 2;
+  background: #5fcec8;
+  padding: 32px;
+  max-width: 444px;
+  max-height: 282.75px;
+  color: #333;
   text-align: left;
+}
+
+/* === Headline === */
+.hero-content h1 {
   font-size: 42px;
   font-family: big-casino-fb, serif;
   font-weight: 800;
   line-height: 42px;
   margin-bottom: 15px;
   color: white;
-  word-spacing: 0;
 }
 
-.hero p {
-  text-decoration: none;
+/* === Paragraph === */
+.hero-content p {
   font-family: brandon-grotesque, sans-serif;
   font-size: 19px;
   line-height: 24.7px;
-  text-align: left;
-  word-spacing: 0;
   margin-bottom: 25px;
-  color: black; /* Schimbăm în alb pentru contrast mai bun */
-
+  color: black;
+  text-align: left;
+  text-decoration: none;
 }
 
-.btn {
+/* === Button === */
+.hero-button {
   font-family: brandon-grotesque, sans-serif;
   display: inline-block;
-  background: black !important;
-  color: white !important;
-
+  background: black;
+  color: white;
+  border-radius: 0;
+  border: none;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.1s;
-  margin: 0% !important;
+  transition: background 0.1s ease, color 0.1s ease;
+  margin: 0;
+  padding: 12px 24px;
+  cursor: pointer;
 }
 
-.btn:hover {
-
-  background: white!important; /*background color*/
-  color: black !important; /*text color*/
-  margin: 0% !important;
+.hero-button:hover {
+  background: white;
+  color: black;
 }
 
-.hero-bg {
-  position:  relative; /* Ensure the hero background is positioned relative to its container */
-  width: 50%; /* Adjust the width as needed */
-  height: 50%; /* Adjust the height as needed */
-}
-
-.hero-content {
-  text-align: left;
-  text-shadow: #000;
-  background: #5fcec8; /* This messed the hero content box colour from hero.css */
-  padding: 32px 32px 32px 32px;
-
-  max-width: 444px;
-  max-height: 282.75px;
-  position: absolute;
-  top: 40px; /* Adjust the top position as needed */
-  left: 60px; /* Adjust the left position as needed */
-  transform: translate(0, 0); /* Adjust the transform as needed */
-  color: #333
-}; /* color change */
-
-/* Responsivitate */
+/* === Responsiveness === */
 @media (max-width: 768px) {
-  .hero h1 {
-      font-size: 36px;
+  .hero-content h1 {
+    font-size: 36px;
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.5);
   }
-  .hero p {
-      font-size: 18px;
+
+  .hero-content p {
+    font-size: 18px;
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.5);
   }
-  .btn {
-      font-size: 18px;
-      padding: 12px 24px;
+
+  .hero-button {
+    font-size: 18px;
+    padding: 12px 24px;
   }
+
+  .hero-content {
+    left: 20px;
+    top: 20px;
+    padding: 24px;
+  }
+}
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  30%  { opacity: 1; }
+  40%  { opacity: 0; }
+  100% { opacity: 0; }
 }

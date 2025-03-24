@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import './Collections.css';
 
 const collectionsData = [
   {
@@ -21,7 +22,6 @@ const collectionsData = [
     image: "/assets/images/digital-archives-small.webp",
     description: "A collection of digitized historical texts and archives for research.",
   },
-
 ];
 
 const Collections = () => {
@@ -40,7 +40,6 @@ const Collections = () => {
     });
 
     lazyImages.forEach((img) => observer.observe(img));
-
     return () => observer.disconnect();
   }, []);
 
@@ -53,11 +52,11 @@ const Collections = () => {
   }, []);
 
   return (
-    <section className="collections">
+    <section className="pagestyle">
       <h2>The Collection</h2>
-      <div className="collections-grid">
+      <div className="pagestyle-grid">
         {collectionsData.map((collection, index) => (
-          <div className="collection-card" key={index}>
+          <div className="pagestyle-card" key={index}>
             <img
               className="lazy-image"
               alt={collection.title}
@@ -67,9 +66,11 @@ const Collections = () => {
                   ? `${collection.imageSmall} 600w, ${collection.image} 1200w`
                   : collection.image
               }
-              sizes="(max-width: 600px) 600px, 1200px"
+              sizes="302.5px"
             />
-            <h3>{collection.title}</h3>
+            <div className="pagestyle-title">
+              <h3>{collection.title}</h3>
+            </div>
             <p>{collection.description}</p>
             <a href="#" className="btn">Explore</a>
           </div>
@@ -77,6 +78,6 @@ const Collections = () => {
       </div>
     </section>
   );
-}
+};
 
 export default Collections;
