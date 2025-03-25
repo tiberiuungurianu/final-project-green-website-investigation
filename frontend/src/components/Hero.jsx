@@ -6,7 +6,7 @@ function Hero({ setSelectedPage }) {
     "/assets/images/hero-bg-small.webp",
     "/assets/images/carusel-1.webp",
     "/assets/images/carusel-2.webp",
-    "/assets/images/carusel-3.webp",
+    "/assets/images/carusel-3.webp", // LCP
     "/assets/images/carusel-4.webp",
   ];
 
@@ -32,30 +32,26 @@ function Hero({ setSelectedPage }) {
   return (
     <section className="hero">
       <div className="hero-image-wrapper">
-        {images.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            srcSet={
-              index === 0
-                ? `
-                /assets/images/hero-bg-small-480.webp 480w,
-                /assets/images/hero-bg-small-768.webp 768w,
-                /assets/images/hero-bg-small.webp 1280w
-              `
-                : undefined
-            }
-            sizes="(max-width: 768px) 100vw, 50vw"
-            width="1280"
-            height="720"
-            alt={`Hero Slide ${index + 1}`}
-            className={`hero-slide ${
-              index === activeSlide ? "visible" : "hidden"
-            }`}
-            loading={index === 0 ? "eager" : "lazy"}
-            fetchpriority={index === 0 ? "high" : "low"}
-          />
-        ))}
+        <img
+          key={activeSlide}
+          src={images[activeSlide]}
+          srcSet={
+            activeSlide === 0
+              ? `
+              /assets/images/hero-bg-small-480.webp 480w,
+              /assets/images/hero-bg-small-768.webp 768w,
+              /assets/images/hero-bg-small.webp 1280w
+            `
+              : undefined
+          }
+          sizes="(max-width: 768px) 100vw, 50vw"
+          width="1280"
+          height="720"
+          alt={`Hero Slide ${activeSlide + 1}`}
+          className="hero-slide visible"
+          loading={activeSlide === 3 ? "eager" : "lazy"} 
+          fetchPriority={activeSlide === 3 ? "high" : "low"}
+        />
       </div>
 
       <div className="hero-overlay"></div>

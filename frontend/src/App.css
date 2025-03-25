@@ -11,19 +11,25 @@ body {
 /* i use this so that v0 resembles the original website as good as possible*/
 
 .header {
-  background-color: #8b0000; /* whis color is similar to theirs */
+  position: relative; /* permite aplicarea z-index-ului */
+  z-index: 10;
+  background-color: #8b0000;
   color: white;
   padding: 30px 20px;
-  text-align:center;
+  text-align: center;
   font-size: 24px;
   font-weight: bold;
 }
+
 .nav {
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: center;
   background-color: #4a1a1a;
   padding: 15px;
 }
+
 .nav a {
   color: white;
   text-decoration: none;

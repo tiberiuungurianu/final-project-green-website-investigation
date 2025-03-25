@@ -1,5 +1,6 @@
 /* === Hero Container to control the page === */
 .hero {
+  margin-top: 60px; /* Adjust this value to match your navbar's height */
   position: relative;
   width: 100vw;
   height: 60vh;
@@ -8,6 +9,7 @@
   justify-content: center;
   overflow: hidden;
 }
+
 
 /* === Hero Background Image Wrapper to differentiate it from the rest of the page for not being overridden by other settings === */
 .hero-image-wrapper {
