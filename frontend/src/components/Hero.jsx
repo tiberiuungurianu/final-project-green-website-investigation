@@ -24,6 +24,11 @@ function Hero({ setSelectedPage }) {
     return () => clearInterval(handle);
   }, [images.length]);
 
+  const goToNext = () =>
+    setActiveSlide((prev) => (prev + 1) % images.length);
+  const goToPrev = () =>
+    setActiveSlide((prev) => (prev - 1 + images.length) % images.length);
+
   return (
     <section className="hero">
       <div className="hero-image-wrapper">
@@ -34,17 +39,19 @@ function Hero({ setSelectedPage }) {
             srcSet={
               index === 0
                 ? `
-              /assets/images/hero-bg-small-480.webp 480w,
-              /assets/images/hero-bg-small-768.webp 768w,
-              /assets/images/hero-bg-small.webp 1280w
-            `
+                /assets/images/hero-bg-small-480.webp 480w,
+                /assets/images/hero-bg-small-768.webp 768w,
+                /assets/images/hero-bg-small.webp 1280w
+              `
                 : undefined
             }
             sizes="(max-width: 768px) 100vw, 50vw"
             width="1280"
             height="720"
             alt={`Hero Slide ${index + 1}`}
-            className={`hero-slide ${index === activeSlide ? "visible" : "hidden"}`}
+            className={`hero-slide ${
+              index === activeSlide ? "visible" : "hidden"
+            }`}
             loading={index === 0 ? "eager" : "lazy"}
             fetchpriority={index === 0 ? "high" : "low"}
           />
@@ -63,6 +70,13 @@ function Hero({ setSelectedPage }) {
           Framework
         </button>
       </div>
+
+      <button className="hero-nav prev" onClick={goToPrev}>
+        ‹
+      </button>
+      <button className="hero-nav next" onClick={goToNext}>
+        ›
+      </button>
     </section>
   );
 }
