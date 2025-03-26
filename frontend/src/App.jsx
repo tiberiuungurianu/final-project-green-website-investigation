@@ -22,7 +22,7 @@ function App() {
    
 {/*styling the loading message*/}
       <Suspense fallback={
-    <div className="loading-container">
+    <div className="loading-container" style={{ minHeight: "100vh" }}> {/*this is used so that the lighthouse will not evaluate the footer as CLS */}
         <p>Loading...</p> 
     </div>
       }>

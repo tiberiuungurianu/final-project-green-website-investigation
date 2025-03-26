@@ -1,7 +1,7 @@
 @import url("./styles/global.css");
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'MerriweatherSans', Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -98,7 +98,7 @@ button:focus-visible {
 }
 
 html, body {
-  font-family: 'Merriweather', serif !important;
+  font-family: inherit;
 }
 
 /* Dimensiuni explicite pentru elemente (reduc layout shift) */

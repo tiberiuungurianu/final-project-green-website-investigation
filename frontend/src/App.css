@@ -1,5 +1,5 @@
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'MerriweatherSans', serif;
   color: #333;
   background-color: #f4f1ea;
   margin: 0;
@@ -79,7 +79,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: white; /* Fundal alb pentru contrast */
   color: black;
   font-size: 24px;

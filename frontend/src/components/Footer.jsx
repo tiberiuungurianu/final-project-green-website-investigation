@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "./Footer.css"; 
 function Footer() {
   return (
     <footer className="footer">
@@ -10,7 +10,7 @@ function Footer() {
           className="footer-logo"
           width={90}
           height={90}
-          loading="eager"
+          loading="lszy"
         />
 
         <div className="footer-citation">
