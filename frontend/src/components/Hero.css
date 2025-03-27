@@ -1,6 +1,6 @@
 /* === Hero Container to control the page === */
 .hero {
-  margin-top: 60px; /* Adjust this value to match your navbar's height */
+  margin-top: 0px; /* Adjust this value to match your navbar's height */
   position: relative;
   width: 100vw;
   height: 60vh;
