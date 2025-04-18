@@ -1,42 +1,46 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const navLinks = [
-  { name: "About Us", page: "about" },
-  { name: "Collections", page: "collections" },
-  { name: "Framework", page: "framework" },
-  { name: "Events", page: "events" },
-  { name: "Video Optimisation", page: "support" }
+  { name: "About Us", path: "/about" },
+  { name: "Collections", path: "/collections" },
+  { name: "Framework", path: "/framework" },
+  { name: "Events", path: "/events" },
+  { name: "Video Optimisation", path: "/video-optimization" }
 ];
 
-function Header({ setSelectedPage }) {
-  // Handler generic pentru toate link-urile de navigație
-  const handleLinkClick = (e, page) => {
-    e.preventDefault();
-    window.scrollTo(0, 0);
-    setSelectedPage(page);
-  };
+function Header() {
+  const navigate = useNavigate();
+
+  const scrollToTop = () => window.scrollTo(0, 0);
 
   return (
     <>
       <header className="header">
-        <link rel="preload" as="image" href="/assets/images/hero-bg-small.webp" type="image/webp"/>
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/images/hero-bg-small.webp"
+          type="image/webp"
+        />
         <div className="container">
           <div className="logo">
-            <a href="#" onClick={(e) => handleLinkClick(e, "home")}>
+            <Link to="/" onClick={scrollToTop}>
               <img
                 src="/assets/images/logo-small.webp"
                 alt="London Library Logo"
-                height={90} width={90}
+                height={90}
+                width={90}
               />
-            </a>
+            </Link>
           </div>
           <nav>
             <ul className="nav-links">
               {navLinks.map((link, index) => (
                 <li key={index}>
-                  <a href="#" onClick={(e) => handleLinkClick(e, link.page)}>
+                  <Link to={link.path} onClick={scrollToTop}>
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -47,12 +51,16 @@ function Header({ setSelectedPage }) {
       <div className="announcement">
         <div className="container">
           <p className="announcement-text">
-            <button 
-              className="subscribe-button" 
-              onClick={() => setSelectedPage("subscribe")}
+            <button
+              className="subscribe-button"
+              onClick={() => {
+                scrollToTop();
+                navigate("/subscribe");
+              }}
             >
               Subscribe to us
-            </button> Clone for Green Website Investigation purposes
+            </button>{" "}
+            Clone for Green Website Investigation purposes
           </p>
         </div>
       </div>

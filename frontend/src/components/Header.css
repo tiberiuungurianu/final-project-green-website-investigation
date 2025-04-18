@@ -39,6 +39,7 @@
   z-index: 1000;
   background-color: #fff;
   box-shadow: 0 2px 4px ;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,10 +52,19 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin: 0 auto;
   max-width: 1200px;
   height: 84px;
-  margin: 0 287px 0 287px;
-  padding: 0 15px 0 15px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header .container,
+.announcement .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header .logo img { /*settings for logo*/

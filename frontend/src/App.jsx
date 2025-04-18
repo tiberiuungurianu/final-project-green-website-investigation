@@ -1,10 +1,11 @@
-import React, { lazy, Suspense, useState } from "react";
+import React, { lazy, Suspense } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./index.css"; // Minimize JavaScript requests
 
-// Lazy loading pentru pagini
+// Lazy loading 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const CollectionsPage = lazy(() => import("./pages/CollectionsPage"));
 const FrameworkPage = lazy(() => import("./pages/FrameworkPage"));
@@ -14,29 +15,28 @@ const EventsPage = lazy(() => import("./pages/EventsPage"));
 const SubscribePage = lazy(() => import("./pages/SubscribePage"));
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState("home"); 
-
   return (
-    <>
-      <Header setSelectedPage={setSelectedPage} />
-   
-{/*styling the loading message*/}
-      <Suspense fallback={
-    <div className="loading-container" style={{ minHeight: "100vh" }}> {/*this is used so that the lighthouse will not evaluate the footer as CLS */}
-        <p>Loading...</p> 
-    </div>
-      }>
-        {selectedPage === "home" && <HomePage setSelectedPage={setSelectedPage} />} 
-        {selectedPage === "about" && <AboutUsPage />}
-        {selectedPage === "collections" && <CollectionsPage />}
-        {selectedPage === "events" && <EventsPage />}
-        {selectedPage === "framework" && <FrameworkPage />}
-        {selectedPage === "support" && <SupportUsPage />}
-        {selectedPage === "subscribe" && <SubscribePage />}
+    <BrowserRouter>
+      <Header />
+      <Suspense
+        fallback={
+          <div className="loading-container" style={{ minHeight: "100vh" }}>
+            <p>Loading...</p>
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/collections" element={<CollectionsPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/framework" element={<FrameworkPage />} />
+          <Route path="/video-optimization" element={<SupportUsPage />} />
+          <Route path="/subscribe" element={<SubscribePage />} />
+        </Routes>
       </Suspense>
-
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 
