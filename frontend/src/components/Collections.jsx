@@ -3,25 +3,29 @@ import './Collections.css';
 
 const collectionsData = [
   {
+    key: "rarebooks",
     title: "Rare Books",
-    image: "/assets/images/rarebooks-small.webp",
-    description: "A curated selection of rare and valuable books.",
+    image: "rarebooks-small.webp",
+    description: "A curated selection of rare and valuable books."
   },
   {
+    key: "manuscripts",
     title: "Manuscripts",
-    image: "/assets/images/manuscripts-small.webp",
-    description: "Handwritten documents and original manuscripts from notable authors.",
+    image: "manuscripts-small.webp",
+    description: "Handwritten documents and original manuscripts from notable authors."
   },
   {
+    key: "periodicals",
     title: "Periodicals",
-    image: "/assets/images/periodicals-small.webp",
-    description: "A collection of historic periodicals and magazines.",
+    image: "periodicals-small.webp",
+    description: "A collection of historic periodicals and magazines."
   },
   {
+    key: "digital-archives",
     title: "Digital Archives",
-    image: "/assets/images/digital-archives-small.webp",
-    description: "A collection of digitized historical texts and archives for research.",
-  },
+    image: "digital-archives-small.webp",
+    description: "A collection of digitized historical texts and archives for research."
+  }
 ];
 
 const Collections = () => {
@@ -43,35 +47,27 @@ const Collections = () => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const images = document.querySelectorAll("img.lazy-image");
-    images.forEach((img) => {
-      img.dataset.src = img.getAttribute("data-src");
-      img.dataset.srcset = img.getAttribute("data-srcset");
-    });
-  }, []);
-
   return (
     <section className="pagestyle">
       <h2>The Collection</h2>
       <div className="pagestyle-grid">
         {collectionsData.map((collection, index) => (
           <div className="pagestyle-card" key={index}>
-            <img
-              className="lazy-image"
-              alt={collection.title}
-              data-src={collection.image}
-              data-srcset={
-                collection.imageSmall
-                  ? `${collection.imageSmall} 600w, ${collection.image} 1200w`
-                  : collection.image
-              }
-              sizes="302.5px"
-            />
-            <div className="pagestyle-title">
-              <h3>{collection.title}</h3>
+            <div className="card-content">
+              <img
+                className="lazy-image"
+                alt={collection.title}
+                data-src={`/assets/images/${collection.key}-300.webp`}
+                data-srcset={`/assets/images/${collection.key}-300.webp 300w, /assets/images/${collection.image} 600w`}
+                sizes="(max-width: 768px) 80vw, 250px"
+                width="250"
+                height="150"
+              />
+              <div className="pagestyle-title">
+                <h3>{collection.title}</h3>
+              </div>
+              <div className="card-description">{collection.description}</div>
             </div>
-            <p>{collection.description}</p>
             <a href="#" className="btn">Explore</a>
           </div>
         ))}

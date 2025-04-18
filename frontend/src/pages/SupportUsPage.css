@@ -1,11 +1,9 @@
 .support-page {
-    font-family: brandon-grotesque, sans-serif;
+    font-family: MerriweatherSans, sans-serif;
     width: 100vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Alege ce aliniere dorești:
-       - Dacă vrei ca elementele să înceapă de sus și să fie centrate pe orizontală: */
     justify-content: flex-start;
     align-items: center;
     margin: 0;

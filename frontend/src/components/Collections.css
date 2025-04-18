@@ -1,19 +1,22 @@
 .pagestyle {
+  font-family: 'MerriweatherSans';
   text-align: center;
-  padding: 50px 20px;
+  padding: 20px 20px;
   background: #ffffff;
 }
 
 .pagestyle h2 {
   font-size: 32px;
   color: #000;
-  margin-bottom: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .pagestyle-grid {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  align-items: stretch;
   overflow-x: auto;
   padding: 20px 0;
   border-top: 1px solid #eee;
@@ -21,62 +24,64 @@
 }
 
 .pagestyle-card {
-  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 250px;
+  height: 400px;
   background: #f8f9fa;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.pagestyle-card:hover {
-  transform: translateY(-5px);
 }
 
 .pagestyle-card img {
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 1.51;
-  border-radius: 8px;
+  height: 150px;
+  width: 100%;
   object-fit: cover;
-  width: 100%; /* ocupă lățimea cardului */
-  margin: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .pagestyle-title {
+  font-family: 'MerriweatherSans';
   background: #f0f0f0;
   padding: 5px;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .pagestyle-title h3 {
   font-size: 20px;
   color: #000;
-  margin: 15px 0;
+  margin: 0;
 }
 
-.pagestyle-card p {
+.card-description {
+  flex-grow: 0;
+  height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 16px;
   color: #666;
+  margin-bottom: auto;
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 10px;
+  align-self: center;
+  margin-top: auto;
   padding: 10px 20px;
-  background: black!important;
-  color: white!important;
+  background: black !important;
+  color: white !important;
   text-decoration: none;
   border-radius: 5px;
   transition: background 0.3s, transform 0.3s;
-  
 }
 
 .btn:hover {
-  color: white!important;
-  background: #5fcec8!important;
+  color: white !important;
+  background: #5fcec8 !important;
   transform: scale(1.05);
 }

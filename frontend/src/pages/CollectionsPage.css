@@ -1,13 +1,10 @@
 .collections-page {
-    width: 100vw; 
-    height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    padding: 0;
-    margin: 0;
-    background-color: #f8f 8f8;
+  font-family: 'MerriweatherSans';
+  width: 100vw;
+  background-color: #f8f8f8;
+  padding: 50px 20px 60px; 
+  margin: 0;
+  display: block; /* Ensures the page takes full width */
   }
   
   .collections-page h2 {
@@ -43,4 +40,9 @@
     font-size: 18px;
     margin-top: 10px;
   }
-  
+   /* additional adaptability for mobile devices if ever tested on those */
+  @media (max-width: 768px) {
+    .collections-page {
+      padding: 40px 15px 80px;
+    }
+  }

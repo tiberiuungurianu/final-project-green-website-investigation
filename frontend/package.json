@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-   "dev": "vite --open",
-  "build": "vite build",
-  "preview": "vite preview",
-  "clean": "rm -rf dist",
-  "serve": "npx serve dist",
-  "rebuild": "rm -rf dist && vite build && vite preview"
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "serve": "npx serve dist",
+    "rebuild": "rm -rf dist && vite build && vite preview"
   },
   "dependencies": {
     "react": "^19.0.0",

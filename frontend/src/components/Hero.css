@@ -1,5 +1,6 @@
 /* === Hero Container to control the page === */
 .hero {
+  font-family: 'MerriweatherSans';
   margin-top: 0px; /* Adjust this value to match your navbar's height */
   position: relative;
   width: 100vw;
@@ -67,9 +68,10 @@
   left: 60px;
   z-index: 2;
   background: #5fcec8;
-  padding: 32px;
+  padding: 34px !important;
   max-width: 444px;
-  max-height: 282.75px;
+  max-height: 340px; /* crescut de la 282.75px */
+  overflow: hidden; /* sau auto dacă vrei fallback la scroll */
   color: #333;
   text-align: left;
 }
@@ -77,7 +79,7 @@
 /* === Headline === */
 .hero-content h1 {
   font-size: 42px;
-  font-family: big-casino-fb, serif;
+  font-family: 'MerriweatherSans';
   font-weight: 800;
   line-height: 42px;
   margin-bottom: 15px;
@@ -86,7 +88,7 @@
 
 /* === Paragraph === */
 .hero-content p {
-  font-family: brandon-grotesque, sans-serif;
+  font-family: 'MerriweatherSans', sans-serif;
   font-size: 19px;
   line-height: 24.7px;
   margin-bottom: 25px;
@@ -97,7 +99,7 @@
 
 /* === Button === */
 .hero-button {
-  font-family: brandon-grotesque, sans-serif;
+  font-family: 'MerriweatherSans';
   display: inline-block;
   background: black;
   color: white;
@@ -142,6 +144,15 @@
 
 .hero-nav.next {
   right: 16px;
+}
+
+/* === Text Shadow for better contrast === */
+.hero-content h1 {
+  text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000;
 }
 
 /* === Responsive === */
