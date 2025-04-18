@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import './Header.css';
 
 const navLinks = [
   { name: "About Us", path: "/about" },
@@ -10,10 +10,6 @@ const navLinks = [
 ];
 
 function Header() {
-  const navigate = useNavigate();
-
-  const scrollToTop = () => window.scrollTo(0, 0);
-
   return (
     <>
       <header className="header">
@@ -25,22 +21,22 @@ function Header() {
         />
         <div className="container">
           <div className="logo">
-            <Link to="/" onClick={scrollToTop}>
+            <a href="/" onClick={() => window.scrollTo(0, 0)}>
               <img
                 src="/assets/images/logo-small.webp"
                 alt="London Library Logo"
                 height={90}
                 width={90}
               />
-            </Link>
+            </a>
           </div>
           <nav>
             <ul className="nav-links">
               {navLinks.map((link, index) => (
                 <li key={index}>
-                  <Link to={link.path} onClick={scrollToTop}>
+                  <a href={link.path} onClick={() => window.scrollTo(0, 0)}>
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -54,8 +50,8 @@ function Header() {
             <button
               className="subscribe-button"
               onClick={() => {
-                scrollToTop();
-                navigate("/subscribe");
+                window.scrollTo(0, 0);
+                window.location.href = "/subscribe";  // Redirect to subscribe page
               }}
             >
               Subscribe to us
