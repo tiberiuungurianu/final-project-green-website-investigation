@@ -33,7 +33,6 @@ function Hero({ setSelectedPage }) {
     <section className="hero">
       <div className="hero-image-wrapper">
         <img
-          key={activeSlide}
           src={images[activeSlide]}
           srcSet={
             activeSlide === 0
@@ -41,8 +40,8 @@ function Hero({ setSelectedPage }) {
               : undefined
           }
           sizes="(max-width: 768px) 100vw, 50vw"
-          width="1280"
-          height="720"
+          width="900"
+          height="600"
           alt={`Hero Slide ${activeSlide + 1}`}
           className="hero-slide visible"
           loading={activeSlide === 0 ? "eager" : "lazy"}

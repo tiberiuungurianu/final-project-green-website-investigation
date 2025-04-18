@@ -14,10 +14,11 @@
 
 .pagestyle-grid {
   display: flex;
+  flex-wrap: wrap; 
   flex-direction: row;
+  justify-content: center;
   gap: 20px;
   align-items: stretch;
-  overflow-x: auto;
   padding: 20px 0;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
@@ -26,7 +27,7 @@
 .pagestyle-card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   width: 250px;
   height: 400px;
   background: #f8f9fa;

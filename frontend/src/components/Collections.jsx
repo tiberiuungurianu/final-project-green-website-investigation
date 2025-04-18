@@ -5,25 +5,25 @@ const collectionsData = [
   {
     key: "rarebooks",
     title: "Rare Books",
-    image: "rarebooks-small.webp",
+    image: "rarebooks-600.webp", // 600px image
     description: "A curated selection of rare and valuable books."
   },
   {
     key: "manuscripts",
     title: "Manuscripts",
-    image: "manuscripts-small.webp",
+    image: "manuscripts-600.webp",
     description: "Handwritten documents and original manuscripts from notable authors."
   },
   {
     key: "periodicals",
     title: "Periodicals",
-    image: "periodicals-small.webp",
+    image: "periodicals-600.webp",
     description: "A collection of historic periodicals and magazines."
   },
   {
     key: "digital-archives",
     title: "Digital Archives",
-    image: "digital-archives-small.webp",
+    image: "digital-archives-600.webp",
     description: "A collection of digitized historical texts and archives for research."
   }
 ];
@@ -57,8 +57,11 @@ const Collections = () => {
               <img
                 className="lazy-image"
                 alt={collection.title}
-                data-src={`/assets/images/${collection.key}-300.webp`}
-                data-srcset={`/assets/images/${collection.key}-300.webp 300w, /assets/images/${collection.image} 600w`}
+                data-src={`/assets/images/${collection.key}-250.webp`}
+                data-srcset={`
+                  /assets/images/${collection.key}-250.webp 250w,
+                  /assets/images/${collection.image} 600w
+                `}
                 sizes="(max-width: 768px) 80vw, 250px"
                 width="250"
                 height="150"

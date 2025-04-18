@@ -146,6 +146,14 @@
   right: 16px;
 }
 
+.hero-slide {
+  contain-intrinsic-size: 900px 600px;
+  aspect-ratio: 3 / 2;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* === Text Shadow for better contrast === */
 .hero-content h1 {
   text-shadow:

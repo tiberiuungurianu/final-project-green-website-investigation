@@ -1,5 +1,3 @@
 User-agent: *
-Disallow: /admin/
 Allow: /
-
-Sitemap: https://greenprototypeforinvestigation.uk/sitemap.xml
+Sitemap: https://prototypeforinvestigation.co.uk/sitemap.xml
