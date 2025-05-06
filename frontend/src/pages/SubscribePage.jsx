@@ -29,14 +29,14 @@ function SubscribePage() {
 
     try {
       const response = await fetch("http://localhost:8080/api/subscribe", {
-        method: "POST",
+        method: "POST", // Use POST method for subscription and sending data to the server for local testing
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         setMessage("Thank you for subscribing!");
-        // Resetează formularul după succes
+        //after successful subscription this will reset the form
         setFormData({ first_name: "", last_name: "", email: "", consent: false });
       } else {
         setMessage("Subscription failed. Please try again.");
@@ -55,7 +55,7 @@ function SubscribePage() {
         </div>
       </div>
 
-      {/* Imaginea newsletter */}
+      {/* the newsletter's image */}
       <img
         src="/assets/images/newsletter.webp"
         alt="Newsletter"
@@ -71,7 +71,7 @@ function SubscribePage() {
               The London Library.
             </p>
 
-            {/* Formularul de abonare */}
+            {/* subscribtion form */}
             <form onSubmit={handleSubmit} className="subscribe-form">
               <label>
                 First name:

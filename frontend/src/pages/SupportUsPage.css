@@ -1,5 +1,5 @@
 .support-page {
-    font-family: MerriweatherSans, sans-serif;
+    font-family: 'MerriweatherSans', sans-serif;
     width: 100vw;
     min-height: 100vh;
     display: flex;
@@ -41,7 +41,7 @@
     border-radius: 20px;
   }
   
-  /* Styling for lazy load button */
+  /* styling for l-l  button */
   .load-video-btn {
     display: flex;
     justify-content: center;
@@ -61,7 +61,7 @@
     background-color: #5fcec8;
   }
   
-  /* Styling for lazy-loaded images */
+  /* styling for lazy-loaded images */
   .image-container {
     display: flex;
     justify-content: center;

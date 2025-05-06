@@ -137,26 +137,27 @@
     align-items: center;
 }
 
-/* de aici incepe pt buton */
+/* for button form here on */
 
 .subscribe-submit {
     background-color: #5bc4bf; /* TURCOAZ */
     color: white;
-    border: none;
     padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: background 0.3s, border-color 0.3s;
     width: 100%;
 }
 
 .subscribe-submit:hover {
     background-color: #401655;
+    
 }
 
-/* Mesaj de răspuns */
+
+ 
 .response-message {
     margin-top: 15px;
     font-size: 14px;

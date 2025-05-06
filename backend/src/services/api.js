@@ -10,13 +10,13 @@ const api = axios.create({
     }
 });
 
-// Funcție pentru a obține date de la backend
+// testing the connection 
 export const getData = async () => {
     try {
-        const response = await api.get('/api/data'); // Endpoint-ul backend-ului
+        const response = await api.get('/api/data'); // backed end endpoint
         return response.data;
     } catch (error) {
-        console.error('Eroare la obținerea datelor:', error);
+        console.error('Error at retrieving data:', error);
         return null;
     }
 };

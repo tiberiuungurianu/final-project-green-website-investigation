@@ -1,12 +1,20 @@
 import React from "react";
-import "./FrameworkPage.css"; 
+import "./FrameworkPage.css";
+
 function FrameworkPage() {
   return (
     <div className="framework-page page">
-     <h2>The Framework</h2>
-     <p>This page will describe the framework and optimization strategies used. Soon enough!!! </p>
-  </div>
-
+      <div className="container">
+        <h2 className="framework-title">The Framework</h2>
+        <div className="framework-content">
+          <img
+            src="/assets/images/framework.svg"
+            alt="Sustainable design framework diagram"
+            className="framework-image"
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 
