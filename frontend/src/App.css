@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'MerriweatherSans';
+  src: url('/fonts/MerriweatherSans.woff2') format('woff2');
+  font-display: swap;
+}
+
 body {
   font-family: 'MerriweatherSans', serif;
   color: #333;

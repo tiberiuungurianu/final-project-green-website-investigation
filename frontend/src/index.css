@@ -1,4 +1,9 @@
 @import url("./styles/global.css");
+@font-face {
+  font-family: 'Merriweather';
+  src: url('/fonts/Merriweather.woff2') format('woff2');
+  font-display: swap;
+}
 
 :root {
   font-family: 'MerriweatherSans', sans-serif;

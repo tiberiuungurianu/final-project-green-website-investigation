@@ -149,6 +149,7 @@
     font-weight: bold;
     transition: background 0.3s, border-color 0.3s;
     width: 100%;
+    text-shadow: 1px 1px 2px black; /* to ensure the contrast doesnt lower the score */
 }
 
 .subscribe-submit:hover {

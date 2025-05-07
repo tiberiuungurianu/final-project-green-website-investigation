@@ -1,8 +1,9 @@
 import React from "react";
-import "./Footer.css"; 
+import "./Footer.css";
+
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" style={{ minHeight: "180px" }}>
       <div className="container">
         <img
           src="/assets/images/logo-white-small.webp"
@@ -10,7 +11,7 @@ function Footer() {
           className="footer-logo"
           width={90}
           height={90}
-          loading="lszy"
+          loading="lazy"
         />
 
         <div className="footer-citation">

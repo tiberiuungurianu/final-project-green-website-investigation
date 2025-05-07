@@ -4,7 +4,6 @@ import "./AboutUsPage.css";
 function AboutUsPage() {
   const [aboutTitle, setAboutTitle] = useState("");
   const [aboutText, setAboutText] = useState("");
-  const [imageSrc, setImageSrc] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,7 +13,6 @@ function AboutUsPage() {
       const data = JSON.parse(cachedData);
       setAboutTitle(data.title);
       setAboutText(data.paragraphs.join("\n"));
-      setImageSrc(data.image);
       setLoading(false);
     } else {
       fetch("/content/aboutUsText.json")
@@ -23,7 +21,6 @@ function AboutUsPage() {
           localStorage.setItem("aboutUsData", JSON.stringify(data));
           setAboutTitle(data.title);
           setAboutText(data.paragraphs.join("\n"));
-          setImageSrc(data.image);
           setLoading(false);
         })
         .catch((error) => {
@@ -37,8 +34,15 @@ function AboutUsPage() {
   const formattedText = useMemo(() => aboutText.split("\n"), [aboutText]);
 
   if (loading) {
-    return <p className="loading-text">Loading...</p>;
+    return (
+      <section className="about-us loading-placeholder">
+        <div className="container">
+          <p className="loading-text">Loading...</p>
+        </div>
+      </section>
+    );
   }
+  
 
   if (error) {
     return <p className="error-text">{error}</p>;
@@ -48,12 +52,6 @@ function AboutUsPage() {
     <section className="about-us">
       <div className="container">
         <h1 className="about-title">{aboutTitle || "Title does not exist"}</h1>
-
-        {/* Imagine normală din JSON, fără Lazy Loading 
-        {imageSrc && (
-          <img src={imageSrc} alt="About Us" />
-        )} */}
-
         <div className="about-content">
           {formattedText.map((paragraph, index) => (
             <p key={index} className="about-paragraph">{paragraph}</p>

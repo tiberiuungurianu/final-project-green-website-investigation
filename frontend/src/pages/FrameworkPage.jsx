@@ -11,6 +11,9 @@ function FrameworkPage() {
             src="/assets/images/framework.svg"
             alt="Sustainable design framework diagram"
             className="framework-image"
+            width="800"
+            height="600"
+            loading="eager"
           />
         </div>
       </div>
